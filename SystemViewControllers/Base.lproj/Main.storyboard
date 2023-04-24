@@ -18,44 +18,70 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pika3" translatesAutoresizingMaskIntoConstraints="NO" id="XUI-o8-M4l">
-                                <rect key="frame" x="30" y="118" width="356" height="295.5"/>
+                                <rect key="frame" x="30" y="118" width="356" height="296.5"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aCJ-cG-KQ5">
-                                <rect key="frame" x="15" y="421.5" width="374" height="35"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="aCJ-cG-KQ5">
+                                <rect key="frame" x="15" y="422.5" width="374" height="34"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OR-Ot-DxG">
-                                        <rect key="frame" x="0.0" y="0.0" width="93.5" height="35"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="35" id="5RD-Rg-hsZ"/>
-                                        </constraints>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1OR-Ot-DxG">
+                                        <rect key="frame" x="0.0" y="0.0" width="75" height="34"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Share"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="shareButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DKK-Ro-Srn"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlZ-0n-4YB">
-                                        <rect key="frame" x="93.5" y="0.0" width="93.5" height="35"/>
+                                        <rect key="frame" x="75" y="0.0" width="74.5" height="34"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Safari"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="safari" catalog="system">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="safariButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GBj-rP-6wt"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iGx-s4-02a">
-                                        <rect key="frame" x="187" y="0.0" width="93.5" height="35"/>
+                                        <rect key="frame" x="149.5" y="0.0" width="75" height="34"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Email"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="mail" catalog="system">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="emailButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qNM-IQ-o67"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDP-2B-xWY">
-                                        <rect key="frame" x="280.5" y="0.0" width="93.5" height="35"/>
+                                        <rect key="frame" x="224.5" y="0.0" width="74.5" height="34"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Camera"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="camera" catalog="system">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
                                         <connections>
                                             <action selector="cameraButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GRi-YF-eqt"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="fill" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EBo-xv-p25">
+                                        <rect key="frame" x="299" y="0.0" width="75" height="34"/>
+                                        <inset key="titleEdgeInsets" minX="0.0" minY="10" maxX="0.0" maxY="0.0"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="message" catalog="system" imagePlacement="bottom">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                                            </backgroundConfiguration>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="messageButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sp6-52-vd6"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -86,7 +112,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" catalog="system" width="128" height="93"/>
+        <image name="mail" catalog="system" width="128" height="93"/>
+        <image name="message" catalog="system" width="128" height="116"/>
         <image name="pika3" width="1200" height="675"/>
+        <image name="safari" catalog="system" width="128" height="123"/>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

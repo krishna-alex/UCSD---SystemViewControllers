@@ -9,8 +9,9 @@ import UIKit
 import SafariServices
 import MessageUI
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, MFMailComposeViewControllerDelegate, MFMessageComposeViewControllerDelegate {
     
+
     @IBOutlet weak var imageView: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,6 +110,28 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         imageView.image = selectedImage
         dismiss(animated: true, completion: nil)
         
+    }
+    
+    @IBAction func messageButtonTapped(_ sender: UIButton) {
+        
+        print("Messsage button tapped")
+        
+        if !MFMessageComposeViewController.canSendText() {
+            print("SMS services are not available")
+            return
+        }
+        
+        let composeMessage = MFMessageComposeViewController()
+        composeMessage.messageComposeDelegate = self
+        
+        //composeMessage.recipients = [""]
+        composeMessage.body = "Hello from my app"
+        
+        self.present(composeMessage, animated: true)
+    }
+    
+    func messageComposeViewController(_ controller: MFMessageComposeViewController, didFinishWith result: MessageComposeResult) {
+        controller.dismiss(animated: true, completion: nil)
     }
     
 }
